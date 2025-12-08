@@ -1,0 +1,23 @@
+services:
+  frontend:
+    build: 
+      context: frontend
+      dockerfile: Dockerfile
+    container_name: data-visualization-frontend
+    ports:
+      - 5173:5173
+    networks:
+      - dvp4_net
+  
+  backend:
+    build:
+      context: server
+      dockerfile: Dockerfile
+    container_name: data-visualization-backend
+    ports:
+      - 8000:8000
+    networks:
+      - dvp4_net
+      
+networks:
+  dvp4_net:

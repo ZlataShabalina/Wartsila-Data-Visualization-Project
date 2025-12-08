@@ -1,0 +1,50 @@
+.custom-node {
+  background-color: #1e1e2f;
+  color: white;
+  border: 2px solid #888;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  min-width: 140px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.2s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.custom-node:hover {
+  transform: scale(1.03);
+}
+
+.custom-node.glow {
+  border-color: #ff6f00ff;
+  animation: pulseGlow 2s infinite ease-in-out;
+  box-shadow:
+    0 0 20px #ff6f00ff,
+    0 0 40px #ff6f00ff;
+}
+
+.custom-node-content {
+  font-weight: 500;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow:
+      0 0 10px #ff6f00ff,
+      0 0 20px #ff6f00ff;
+  }
+  50% {
+    box-shadow:
+      0 0 25px #ff6f00ff,
+      0 0 45px #ff6f00ff;
+  }
+  100% {
+    box-shadow:
+      0 0 10px #ff6f00ff,
+      0 0 20px #ff6f00ff;
+  }
+}

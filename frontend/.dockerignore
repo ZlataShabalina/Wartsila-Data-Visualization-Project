@@ -1,0 +1,7 @@
+.gitignore
+Dockerfile
+.dockerignore
+eslint.config.js
+dist
+node_modules
+README.md
